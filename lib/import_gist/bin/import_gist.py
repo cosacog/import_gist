@@ -8,6 +8,15 @@ def import_gist(url_gist):
     import os,sys, urllib, tempfile
     fname_func = 'tmp_func.py' # temporary file name of .py
     tmp_dir = tempfile.mkdtemp()
+    # check url_gist
+    # append '/' at the end
+    if url_gist[-1] is not '/':
+        url_gist = url_gist + '/'
+    
+    # append 'raw/' at the end
+    if url_gist[-5] is not '/raw/':
+        url_gist = url_gist + 'raw/'
+
     urllib.urlretrieve(url_gist, filename=os.path.join(tmp_dir,fname_func))
     sys.path.append(tmp_dir)
     import tmp_func as mod_func

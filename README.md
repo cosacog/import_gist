@@ -19,4 +19,3 @@ url_gist = 'https://gist.githubusercontent.com/cosacog/67ac95feef8a2a1cd373d43a8
 sample_module = import_gist(url_gist)
 dir(sample_module) # list functions
 ```
-

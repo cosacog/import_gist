@@ -16,7 +16,7 @@ def import_gist(url_gist):
     # append 'raw/' at the end
     if url_gist[-5:] != '/raw/':
         url_gist = url_gist + 'raw/'
-
+    urllib.request.urlretrieve(url_gist, filename=os.path.join(tmp_dir,fname_func))
     sys.path.append(tmp_dir)
     import tmp_func as mod_func
     sys.path.remove(tmp_dir)

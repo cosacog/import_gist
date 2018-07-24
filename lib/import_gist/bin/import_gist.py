@@ -17,7 +17,6 @@ def import_gist(url_gist):
     if url_gist[-5:] != '/raw/':
         url_gist = url_gist + 'raw/'
 
-    urllib.urlretrieve(url_gist, filename=os.path.join(tmp_dir,fname_func))
     sys.path.append(tmp_dir)
     import tmp_func as mod_func
     sys.path.remove(tmp_dir)
@@ -25,3 +24,4 @@ def import_gist(url_gist):
 
 if __name__ =='__main__':
     print("I'm sorry. There is no main script.")
+    

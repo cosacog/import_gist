@@ -1,4 +1,5 @@
-# coding: utf-8
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 def import_gist(url_gist):
     '''
     import custom functions from gist.github.com

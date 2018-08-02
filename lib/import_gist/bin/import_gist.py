@@ -9,6 +9,7 @@ def import_gist(url_gist):
           e.g. https://gist.githubusercontent.com/cosacog/67ac95feef8a2a1cd373d43a86fe2c9c/raw/
     '''
     import os,sys, urllib, tempfile
+    import urllib.request
     fname_func = 'tmp_func.py' # temporary file name of .py
     tmp_dir = tempfile.mkdtemp()
     # check url_gist

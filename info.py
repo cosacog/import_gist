@@ -7,7 +7,7 @@ INFO = dict(
   license     = "MIT License",
   url         = "https://github.com/cosacog/import_gist",
   classifiers = [
-    "Programming Language :: Python :: 2.7",
+    "Programming Language :: Python :: 3.5",
     "License :: OSI Approved :: MIT License"
   ]
 )

@@ -1,5 +1,5 @@
 # import_gist
-import gist script
+import gist python script
 
 # Requirements
 urllib, tempfile

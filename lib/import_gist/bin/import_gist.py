@@ -10,7 +10,7 @@ def import_gist(url_gist_in):
     '''
     import os,sys, urllib, tempfile
     import urllib.request
-    fname_function = 'tmp_func.py' # temporary file name of .py
+    fname_function = tempfile.mktemp()+'.py' # temporary file name of .py
     tmp_dir = tempfile.mkdtemp()
     # check url_gist: if url includes '#', it is one of the files in the gist.
     if '#' in url_gist_in:

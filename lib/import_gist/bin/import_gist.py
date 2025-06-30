@@ -10,7 +10,7 @@ def import_gist(url_gist_in):
     '''
     import os,sys, urllib, tempfile
     tmp_dir = tempfile.mkdtemp()
-    tmp_func = tempfile.mktemp(suffix='.py',dir=tmp_dir) # temporary file name of .py
+    fname_function = tempfile.mktemp(suffix='.py',dir=tmp_dir) # temporary file name of .py
     # check url_gist: if url includes '#', it is one of the files in the gist.
     if '#' in url_gist_in:
         # if url_gist includes '#', it is one of the files in the gist.
@@ -25,9 +25,9 @@ def import_gist(url_gist_in):
         # append 'raw/' at the end
         if url_gist_in[-5:] != '/raw/':
             url_gist_out = url_gist_in + 'raw/'
-    urllib.request.urlretrieve(url_gist_out, filename=tmp_func)
+    urllib.request.urlretrieve(url_gist_out, filename=fname_function)
     sys.path.append(tmp_dir)
-    import tmp_func as mod_func
+    exec(f'import {os.path.basename(fname_function)} as mod_func')
     sys.path.remove(tmp_dir)
     return mod_func
 

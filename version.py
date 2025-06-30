@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-VERSION = "0.0.7"
+VERSION = "0.0.8"
 __version__ = VERSION
 __title__ = "import_gist"
 __license__ = "MIT License"
